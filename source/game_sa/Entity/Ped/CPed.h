@@ -525,6 +525,7 @@ public:
     void SetModelIndex(uint32 modelIndex);
     bool IsInVehicleThatHasADriver();
 
+    CVehicle* GetVehicleIfInOne() { return bInVehicle ? m_pVehicle : nullptr; }
     inline uint8 GetCreatedBy() { return m_nCreatedBy; }
     inline bool IsCreatedBy(ePedCreatedBy v) { return v == m_nCreatedBy; }
     inline CPedStuckChecker& GetStuckChecker() { return m_pIntelligence->m_pedStuckChecker; }

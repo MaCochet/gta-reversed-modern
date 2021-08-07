@@ -111,7 +111,7 @@ CTask* CTaskComplexDriveFireTruck::ControlSubTask_Reversed(CPed* ped)
 
     if (subTaskId == TASK_COMPLEX_CAR_DRIVE_TO_POINT)
     {
-        if (m_bIsDriver && m_pFire->m_nFlags.bBeingExtinguished)
+        if (m_bIsDriver && m_pFire->m_bBeingExtinguished)
         {
             CFire* newFire = gFireManager.FindNearestFire(m_pVehicle->GetPosition(), true, true);
 

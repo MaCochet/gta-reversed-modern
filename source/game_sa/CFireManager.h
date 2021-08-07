@@ -6,7 +6,6 @@
 */
 #pragma once
 
-
 #include "CFire.h"
 
 #define MAX_NUM_FIRES 60
@@ -40,6 +39,9 @@ public:
     CFire* StartFire(CEntity* target, CEntity* creator, _IGNORED_ float size, _IGNORED_ uint8 arg3, uint32 time, int8 numGenerations);
     int32 StartScriptFire(CVector const& point, CEntity* target, _IGNORED_ float arg2, _IGNORED_ uint8 arg3, int8 numGenerations, int32 size);
     void Update();
+
+    size_t GetNumOfActiveFires(); // NOTSA
+    CFire& GetRandomFire(); // NOTSA
 };
 
 VALIDATE_SIZE(CFireManager, 0x964);
